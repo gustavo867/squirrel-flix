@@ -41,6 +41,12 @@ export const VideoCardList = styled.ul`
   display: flex;
   overflow-x: auto;
   flex-direction: row;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa; /* or add it to the track */
+  }
   
   li {
     margin-right: 16px;
@@ -52,4 +58,5 @@ export const VideoCardGroupContainer = styled.section`
   min-height: 197px;
   margin-left: 5%;
   margin-bottom: 16px;
+
 `;
