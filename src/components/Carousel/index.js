@@ -1,4 +1,5 @@
 import React from 'react';
+import LinesEllipsis from 'react-lines-ellipsis'
 import { VideoCardGroupContainer, VideoCardList, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 
@@ -32,6 +33,14 @@ function VideoCardGroup({
 
           return (
             <li key={video.titulo}>
+             <LinesEllipsis
+                style={{ textAlign: 'center', maxWidth: 300 }}
+                text={video.titulo}
+                maxLine='1'
+                ellipsis='...'
+                trimRight={false}
+                basedOn='letters'
+              />
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
